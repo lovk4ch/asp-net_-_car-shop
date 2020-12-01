@@ -1,3 +1,5 @@
+using asp_net___car_shop.Data.Interface;
+using asp_net___car_shop.Data.Mocks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,6 +12,8 @@ namespace asp_net___car_shop
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IAllCars, MockCars>();
+            services.AddTransient<ICarsCategory, MockCategory>();
             services.AddMvc();
             services.AddControllers(options => options.EnableEndpointRouting = false);
         }
