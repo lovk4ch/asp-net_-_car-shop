@@ -22,7 +22,8 @@ namespace asp_net___car_shop.Data.Mocks
                         price = 45000,
                         isFavourite = true,
                         isAvailable = true,
-                        category = carsCategory.AllCategories.First() }
+                        category = carsCategory.AllCategories.First()
+                    }
                 };
             }
         }
